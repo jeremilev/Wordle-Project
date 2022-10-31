@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="body-container">
+        <div id="overlay-container">
+            <div id="overlay-popover"></div>
+            <div id="overlay-popover-result">
+                <div id="result-announce" class="result-text"></div>
+                <div class="result-text"></div>
+                <div class="result-text"></div>
+            </div>
+        </div>
+        <div class="nav">
+            <a href="">
+                <h1 id="wordword">Wordle</h1>
+            </a>
+        </div>
+        <div class="try-container">
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+        </div>
+        <div class="try-container">
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+        </div>
+        <div class="try-container">
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+        </div>
+        <div class="try-container">
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+        </div>
+        <div class="try-container">
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+        </div>
+        <div class="try-container">
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+            <div class="letter-block"></div>
+        </div>
+        <br>
+        <div class="letter-button-container">
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+        </div>
+        <div class="letter-button-container">
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+        </div>
+        <div class="letter-button-container">
+            <button id="enter-button" class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button class="keyboard-button"></button>
+            <button id="delete-button" class="keyboard-button"></button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

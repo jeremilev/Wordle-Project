@@ -1,0 +1,482 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #1a1a1b;
+    overflow-y: hidden;
+    height: 100vh;
+}
+
+#body-container {
+    padding-top: 30px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+body a h1 {
+    text-transform: uppercase;
+    font-size: xxx-large;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 500;
+}
+
+.nav {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-bottom: 0.5px solid;
+    border-color: grey;
+}
+
+
+.try-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.letter-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7px;
+    width: 70px;
+    height: 70px;
+    border: solid;
+    border-color: #3a3a3c;
+    color: #d3d3d3;
+    border-radius: 3px;
+    font-size: xxx-large;
+    font-weight: 900;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.letter-block:hover {
+    border-color: gray;
+}
+
+
+.letter-block:last-child {
+    margin-right: 0px;
+}
+
+.letter-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.keyboard-button {
+    width: 70px;
+    height: 80px;
+    background: grey;
+    color: white;
+    border: solid 1px;
+    border-color: grey;
+    border-radius: 10px;
+    margin-right: 5px;
+    transition-duration: .3s;
+    font-size: xx-large;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+.keyboard-button:hover {
+    background: darkgrey !important;
+}
+
+.keyboard-button:last-child {
+    margin-right: 0px;
+}
+
+#enter-button {
+    width: 110px;
+    font-size: x-large;
+}
+
+#delete-button {
+    width: 120px;
+    font-size: x-large;
+}
+
+.shake {
+    animation-name: shake;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+#overlay-container {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /*Stack order */
+    z-index: 2;
+    cursor: pointer;
+    justify-content: center;
+    padding-top: 8%;
+}
+
+#overlay-popover {
+    height: 7vh;
+    width: 25vh;
+    background: white;
+    display: none;
+    border-radius: 5px;
+    font-size: x-large;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -ms-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    cursor: none;
+}
+
+#overlay-popover-result {
+    height: 35vh;
+    width: 30vh;
+    display: none;
+    border-radius: 10px;
+    border: solid;
+    border-color: grey;
+    font-weight: 800;
+    background: #1a1a1b;
+    font-size: x-large;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.result-text {
+    display: none;
+    font-size: xx-large;
+    color: #d3d3d3;
+    z-index: 5;
+    margin-bottom: 30px;
+}
+
+#result-announce {
+    font-size: xxx-large;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px);
+    }
+}
+
+@media (min-height: 1080px) {
+    #body-container {
+        padding-top: 40px;
+    }
+
+    .letter-block {
+        width: 90px;
+        height: 90px;
+    }
+
+    br {
+        margin-top: 30px;
+    }
+
+    .keyboard-button {
+        width: 90px;
+        height: 100px;
+    }
+
+    #enter-button {
+        width: 120px;
+    }
+
+    #delete-button {
+        width: 140px;
+    }
+
+}
+
+
+@media (min-height: 1050px) {
+    #body-container {
+        padding-top: 30px;
+    }
+
+    .nav {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    body a h1 {
+        font-size: xxx-large;
+    }
+
+    .letter-block {
+        width: 85px;
+        height: 85px;
+    }
+
+    br {
+        margin-top: 10px;
+    }
+
+    .keyboard-button {
+        width: 80px;
+        height: 90px;
+    }
+}
+
+
+@media (max-height: 899px) {
+    #body-container {
+        padding-top: 15px;
+    }
+
+    .nav {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    body a h1 {
+        font-size: xxx-large;
+    }
+
+    .letter-block {
+        width: 55px;
+        height: 55px;
+    }
+
+    br {
+        margin-top: 10px;
+    }
+
+    .keyboard-button {
+        width: 55px;
+        height: 60px;
+        font-size: x-large;
+    }
+}
+
+
+@media (max-height: 750px) {
+    #body-container {
+        padding-top: 15px;
+    }
+
+    .nav {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    body a h1 {
+        font-size: xx-large;
+    }
+
+    .letter-block {
+        width: 50px;
+        height: 50px;
+        font-size: xx-large;
+    }
+
+    br {
+        margin-top: 10px;
+    }
+
+    .keyboard-button {
+        width: 50px;
+        height: 55px;
+        font-size: xx-large;
+    }
+
+    #enter-button {
+        width: 75px;
+        font-size: large;
+    }
+
+    #delete-button {
+        width: 85px;
+        font-size: large;
+    }
+}
+
+
+
+@media (max-height: 630px) {
+    #body-container {
+        padding-top: 15px;
+    }
+
+    .nav {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    body a h1 {
+        font-size: xx-large;
+    }
+
+    .letter-block {
+        width: 45px;
+        height: 45px;
+        font-size: xx-large;
+    }
+
+    br {
+        display: none;
+    }
+
+    .keyboard-button {
+        width: 45px;
+        height: 50px;
+        font-size: x-large;
+    }
+
+    #enter-button {
+        width: 65px;
+        font-size: large;
+    }
+
+    #delete-button {
+        width: 75px;
+        font-size: large;
+    }
+}
+
+
+@media (max-height: 575px) {
+
+    #body-container {
+        padding-top: 15px;
+    }
+
+    .nav {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    body a h1 {
+        font-size: x-large;
+    }
+
+    .letter-block {
+        width: 35px;
+        height: 35px;
+        font-size: x-large;
+    }
+
+    br {
+        display: none;
+    }
+
+    .keyboard-button {
+        width: 35px;
+        height: 40px;
+        font-size: x-large;
+    }
+
+    #enter-button {
+        width: 55px;
+        font-size: large;
+    }
+
+    #delete-button {
+        width: 65px;
+        font-size: large;
+    }
+}
+
+@media (max-height: 420px) {
+    #body-container {
+        padding-top: 15px;
+    }
+
+    .nav {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    body a h1 {
+        font-size: x-large;
+    }
+
+    .letter-block {
+        width: 25px;
+        height: 25px;
+        font-size: large;
+    }
+
+    br {
+        display: none;
+    }
+
+    .keyboard-button {
+        width: 30px;
+        height: 35px;
+        font-size: large;
+    }
+
+    #enter-button {
+        width: 45px;
+        font-size: small
+    }
+
+    #delete-button {
+        width: 55px;
+        font-size: small;
+    }
+}
